@@ -22,7 +22,7 @@ module Crittercism
     zip_dsym!
 
     app_dsym = App.config.app_bundle_dsym(platform)
-    upload_uri = "https://api.crittercism.com/api_beta/dsym/#{app_id}"
+    upload_uri = "https://api.eu.crittercism.com/api_beta/dsym/#{app_id}"
     command = "/usr/bin/curl #{upload_uri}"\
                  " --silent --output /dev/null -w '%{http_code}'"\
                  " -F dsym=@'#{app_dsym}.zip'"\
